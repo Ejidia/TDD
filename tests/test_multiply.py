@@ -7,3 +7,6 @@ def test_multiply_1_by_1():
 def test_multiply_2_by_2():
     assert multiply(2, 2) == 4
 
+def test_multiply_3_by_3():
+    assert multiply(3, 3) == 9
+
