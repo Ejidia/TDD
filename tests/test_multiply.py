@@ -12,3 +12,6 @@ def test_multiply_3_by_3():
 
 def test_multiply_4_by_4():
     assert multiply(4, 4) == 16
+
+def test_multiply_23_by_45():
+    assert multiply(23, 45) == 23 * 45
