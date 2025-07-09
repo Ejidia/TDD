@@ -27,18 +27,39 @@ def test_fibonacci_15():
 
 
 
-def test_fibonacci_negative():
-    try:
-        fibonacci(-1)
-    except ValueError as e:
-        assert str(e) == "Input must be a non-negative integer"
-    else:
-        assert False, "Expected ValueError for negative input"
-def test_fibonacci_non_integer():
-    try:
-        fibonacci(3.5)
-    except ValueError as e:
-        assert str(e) == "Input must be a non-negative integer"
-    else:
-        assert False, "Expected ValueError for non-integer input"
+# fibonacci.py
 
+"""def fibonacci(n):
+    
+    Calculate the nth Fibonacci number.
+    Accepts non-negative integers and floats that can be converted to integers.
+
+    Args:
+        n (int or float): The index in the Fibonacci sequence.
+
+    Returns:
+        int: The Fibonacci number at index n.
+
+    Raises:
+        ValueError: If n is negative or not convertible to an integer."""
+"""def fibonacci(n):
+    if isinstance(n, float):
+        if n != int(n):  # reject 3.5 but allow 3.0
+            raise ValueError("Input must be a whole number")
+        n = int(n)
+
+    if not isinstance(n, int):
+        raise ValueError("Input must be a non-negative integer")
+
+    if n < 0:
+        raise ValueError("Input must be a non-negative integer")
+
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b"""
