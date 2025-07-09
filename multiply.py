@@ -1,4 +1,7 @@
-from multiply import multiply
+# multiply.py
+# Ejidia and Patience, Linda
+# This module provides a function to multiply two numbers.
 
-def test_multiply_1_by_1():
-    assert multiply(1, 1) == 1
+def multiply(a, b):
+    return a * b
+
