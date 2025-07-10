@@ -5,18 +5,15 @@ def test_calculate_tax():
       assert calculate_tax(10000) == 0
 
 def test_calculate_twenty_tax():
-    # Test: 20% tax for earnings exactly 12,000
-      assert calculate_tax(12000) == 2400
+      assert calculate_tax(12100) == 20
+
+def test_calculate_36000_tax():
+      assert calculate_tax(36000) == 4800
+
+def test_calculate_36100_tax():
+      assert calculate_tax(36100) == 4840
+
+def test_calculate_120000_tax():
+      assert calculate_tax(120000) == 38400
+
     
-    # Test: 20% tax for earnings between 12,000 and 36,000
-      assert calculate_tax(25000) == 5000
-    # Test: 20% tax for earnings exactly 36,000
-      assert calculate_tax(36000) == 7200
-
-def test_calculate_forty_tax():
-    # Test: 40% tax for earnings above 36,000
-      assert calculate_tax(40000) == 16000
-
-# Run tests
-#test_calculate_tax()
-#print("All tests passed!")
